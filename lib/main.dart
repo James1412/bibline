@@ -10,9 +10,18 @@ class BiblineApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          color: Colors.white,
+          elevation: 0,
+          surfaceTintColor: Colors.white,
+          shadowColor: Colors.white,
+        ),
+      ),
+      home: const HomeScreen(),
     );
   }
 }
